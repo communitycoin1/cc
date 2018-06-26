@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Communitycoin
+Comment=Communitycoin P2P Cryptocurrency
+Comment[fr]=Communitycoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Communitycoin, eşten eşe kriptografik sanal para birimi
+Exec=communitycoin-qt %u
+Terminal=false
+Type=Application
+Icon=dash128
+MimeType=x-scheme-handler/communitycoin;
+Categories=Office;Finance;
