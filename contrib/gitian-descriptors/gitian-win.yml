@@ -1,5 +1,5 @@
 ---
-name: "communitycoin-win-0.12"
+name: "communitycoin-win-1.0"
 enable_cache: true
 suites:
 - "trusty"
@@ -23,8 +23,8 @@ packages:
 - "python"
 reference_datetime: "2017-01-01 00:00:00"
 remotes:
-- "url": "https://github.com/dashpay/communitycoin.git"
-  "dir": "communitycoin"
+- "url": "https://github.com/communitycoin1/cc.git"
+  "dir": "cc"
 files: []
 script: |
   WRAP_DIR=$HOME/wrapped
@@ -94,7 +94,7 @@ script: |
 
   export PATH=${WRAP_DIR}:${PATH}
 
-  cd communitycoin
+  cd cc
   BASEPREFIX=`pwd`/depends
   # Build dependencies for each host
   for i in $HOSTS; do
@@ -132,7 +132,6 @@ script: |
     make ${MAKEOPTS} -C src check-security
     make deploy
     make install DESTDIR=${INSTALLPATH}
-    cp -f dashcore-*setup*.exe $OUTDIR/
     cd installed
     mv ${DISTNAME}/bin/*.dll ${DISTNAME}/lib/
     find . -name "lib*.la" -delete
